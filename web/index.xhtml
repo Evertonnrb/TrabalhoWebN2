@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <p:panelGrid columns="2">
+            <h:outputLabel for="ra"  value="Ra"></h:outputLabel>
+            <p:inputText id="ra" value="#{alunoBean.ra}"></p:inputText>
+            <h:outputLabel for="nome"  value="Nome"></h:outputLabel>
+            <p:inputText id="nome" value="#{alunoBean.nome}"></p:inputText>
+            <h:outputLabel for="n1"  value="N1"></h:outputLabel>
+            <p:inputText id="n1" value="#{alunoBean.n1}"></p:inputText>
+            <h:outputLabel for="n2"  value="N2"></h:outputLabel>
+            <p:inputText id="n2" value="#{alunoBean.n2}"></p:inputText>
+            <h:outputText></h:outputText>
+            <p:commandButton value="Enviar" action="#{alunoBean.id}"></p:commandButton>
+            
+            <p:fieldset legend="Lista de alunos"> 
+                <p:panelGrid columns="4">
+                    <h:outputLabel value="Ra"></h:outputLabel>
+                    <h:inputText value="#{alunoBean.ra}"></h:inputText>
+                    
+                    <h:outputLabel value="Nome"></h:outputLabel>
+                    <h:inputText value="#{alunoBean.nome}"></h:inputText>
+                    
+                    <h:outputLabel value="Media"></h:outputLabel>
+                    <h:inputText value="#{alunoBean.calculaMedia(n1, n2)}"></h:inputText>
+                </p:panelGrid>
+            </p:fieldset>
+        </p:panelGrid>
+    </h:body>
+</html>
+
